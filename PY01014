@@ -1,0 +1,11 @@
+a,k,n = map(int,input().split())
+check = 0
+
+b = k - a % k + a
+
+for b in range (b-a,n+1,k):
+    if(a+b<=n):
+        check = 1
+        print(b, end= " ")
+if(check == 0):
+    print(-1)
