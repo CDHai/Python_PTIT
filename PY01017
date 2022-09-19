@@ -11,3 +11,4 @@ while(t>0):
         else:
             d += 1
     print()
+ 
