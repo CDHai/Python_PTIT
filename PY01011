@@ -1,0 +1,15 @@
+def check(n) :
+    if(len(n) % 2 == 1) :
+        return 0
+    for i in range(len(n)):
+        if(n[i] != '0' and n[i] != '2' and n[i] != '4' and n[i] != '6' and n[i] != '8' or n[i] != n[len(n) - i - 1] ) :
+            return 0
+    return 1
+
+t = int(input())
+for i in range(t) :
+    n = int(input())
+    for i in range(n) :
+        if(check(str(i)) == 1) :
+            print(i, end=" ")
+    print()
