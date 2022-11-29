@@ -1,0 +1,11 @@
+t = int(input())
+for i in range(t) :
+    n = input()
+    d = 0
+    s = ""
+    for i in n :
+        if( i.isdigit() ) :
+            d += int(i)
+        else :
+            s += i
+    print("".join(sorted(s)), d, sep = "")
