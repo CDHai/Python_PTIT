@@ -1,0 +1,19 @@
+import math
+
+class Point2:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+    
+    def Pro(self, k):
+        tmp1 = self.y * k.y / math.gcd(self.y, k.y)
+        tu = self.x * (tmp1 / self.y) + k.x * (tmp1 / k.y)
+        mau = tmp1
+        tu1 = tu / math.gcd(int(tu), int(mau))
+        mau1 = mau / math.gcd(int(tu), int(mau))
+        print(str(int(tu1)) + '/' + str(int(mau1)))
+
+arr = input().split()
+p1 = Point2(int(arr[0]), int(arr[1])) 
+p2 = Point2(int(arr[2]), int(arr[3]))
+p1.Pro(p2)
