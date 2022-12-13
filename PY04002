@@ -1,0 +1,26 @@
+
+class Rectangle:
+    def __init__(self, x, y, c):
+        self.x = x
+        self.y = y
+        self.c = c[0:1:].upper() + c[1::].lower()
+    
+    def check(self):
+        if self.x <= 0 or self.y <= 0:
+            return 0
+        else:
+            return 1
+
+    def tostring(self):
+        if self.check() == 1:
+            print((self.x + self.y) * 2, self.x * self.y, self.c, sep = ' ')
+        else:
+            print('INVALID')
+
+
+
+
+
+arr = input().split()
+r = Rectangle(int(arr[0]), int(arr[1]), arr[2])
+r.tostring()
