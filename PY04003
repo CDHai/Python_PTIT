@@ -1,0 +1,15 @@
+import math
+
+class Point:
+    def __init__(self, x ,y):
+        self.x = x
+        self.y = y
+    
+    def output(self):
+        x0 = self.x / math.gcd(self.x, self.y)
+        y0 = self.y / math.gcd(self.x, self.y)
+        print(str(int(x0)) + '/' + str(int(y0)))
+
+arr = input().split()
+p1 = Point(int(arr[0]), int(arr[1]))
+p1.output()
